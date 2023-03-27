@@ -1,42 +1,42 @@
-#container{
+img{
+  height: 70px;
+  height: 70px;
+}
+
+#game-container {
   position: relative;
-  left:24%;
-  margin-top:10%;
-  border: 2px solid black ;
-  background-image: url("../img/sfondo1.jpg");
-  background-repeat: no-repeat;
   width: 700px;
-  height: 400px;
+  height: 700px;
+  margin: auto;
+  border: 1px solid black;
 }
 
-p {
-  font-size:50px;
-  color: yellow;
-  font-weight: bold;
-  -webkit-text-stroke: 1px #000;
-  text-align: center;
-  margin: 2%;
+#personaggio {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
-
-.titolo {
-  animation: pulsate 1s ease-out;
-  animation-iteration-count: infinite; 
+#polpetta {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-size: cover;
 }
 
-
-@keyframes titolo {
-  0%{
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  50%{
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-
-}
+#bomb {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+} 
