@@ -1,93 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Catch My Veggie</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piovono Polpette </title>
     <link rel="stylesheet" href="../css/gamestyle.css">
 
   </head>
-<body>
-    <div id="game-container">
-      <div id="personaggio"> <img src="../img/clipart2189534.png">
-      <div id="polpetta"> <img src="../img/clipart1924778.png"></div>
-      <div id="bomb"> <img src="../img/clipart3340074.png"></div>
+
+  <body>
+    <div class="game">
+
+        <div class="polpetta">
+            <img src="../img/clipart1924778.png">
+        </div>
+
+        <div class="danger-line"></div>
+
+        <div class="player">
+          <img src="../img/cl2.png">
+        </div>
+
     </div>
+    <link rel="stylesheet" href="../js/gameIndex.js">
 
-  <script>
-    var container = document.getElementById("game-container");
-      var polpetta = document.getElementById("polpetta");
-      var bomb = document.getElementById("bomb");
-      var personaggio = document.getElementById("personaggio");
-      var score = 0;
+  </body>
 
-      function updateScore() {
-        document.title = "Score: " + score;
-      }
-
-      function movePolpetta() {
-        var x = Math.random() * 300 + 40;
-        polpetta.style.top = "-690px";
-        polpetta.style.left = x + "px";
-      }
-
-      function moveBomb() {
-        var x = Math.random() * 300 + 40;
-        bomb.style.top = "-690px";
-        bomb.style.left = x + "px";
-      }
-
-      function fall() {
-
-        var top = parseInt(polpetta.style.top);
-        if (top >= container.style.height) {
-          var left = parseInt(polpetta.style.left);
-          var personaggioLeft = parseInt(personaggio.style.left);
-          if (left >= personaggioLeft - 25 && left <= personaggioLeft + 25) {
-            score++;
-            updateScore();
-          } else {
-            score--;
-            updateScore();
-          }
-          movePolpetta();
-        } else {
-          polpetta.style.top = top + 1 + "px";
-          setTimeout(fall, 10);
-        }
-      }
-
-      function bombFall() {
-        
-        var top = parseInt(bomb.style.top);
-        if (top >= 450) {
-          var left = parseInt(bomb.style.left);
-          var personaggioLeft = parseInt(personaggio.style.left);
-          if (left >= personaggioLeft - 25 && left <= personaggioLeft + 25) {
-            score--;
-            updateScore();
-          }
-          moveBomb();
-        } else {
-          bomb.style.top = top + 1 + "px";
-          setTimeout(bombFall, 10);
-        }
-      }
-
-      function movePersonaggio(event) {
-        var left = parseInt(personaggio.style.left);
-        if (event.keyCode == 37 && left > 50) {
-          personaggio.style.left = left - 10 + "px";
-        } else if (event.keyCode == 39 && left < 450) {
-          personaggio.style.left = left + 10 + "px";
-        }
-      }
-
-      movePolpetta();
-      moveBomb();
-      updateScore();
-      setInterval(fall, 100);
-      setInterval(bombFall, 300);
-      document.addEventListener("keydown", movePersonaggio);
-  </script>
-</body>
 </html>
-
