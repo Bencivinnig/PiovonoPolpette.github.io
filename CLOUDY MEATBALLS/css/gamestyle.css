@@ -39,14 +39,14 @@ body{
   height: 130px;
 }
 
-.polpetta{
-  height: 50px;
-  width: 50px;
+.mb{
+  height: 30px;
+  width: 30px;
   position : absolute;
   
 }
 
-.polpetta img{
-  height: 50px;
-  width: 50px;
+.mb img{
+  height: 30px;
+  width: 30px;
 }
