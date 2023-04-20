@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding:0;
+  overflow: hidden;
 }
 
 body{
@@ -47,6 +48,18 @@ body{
 }
 
 .mb img{
+  height: 30px;
+  width: 30px;
+}
+
+.bomb{
+  height: 30px;
+  width: 30px;
+  position : absolute;
+  
+}
+
+.bomb img{
   height: 30px;
   width: 30px;
 }
