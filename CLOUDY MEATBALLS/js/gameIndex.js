@@ -89,7 +89,7 @@ function generateBomb(){
 
     //funzione per gestire bombe
    function fallDownBomb(){
-    if(bombBottom < playerBottom + 80 && bombBottom > playerBottom && bombLeft > playerLeft - 30 && bombLeft < playerLeft + 80){
+    if(bombBottom < playerBottom + 80 && bombBottom > playerBottom && bombLeft > playerLeft - 30 && bombLeft < playerLeft + 70){
         alert("game over");
 
     }
