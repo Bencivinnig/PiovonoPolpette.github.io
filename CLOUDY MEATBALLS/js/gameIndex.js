@@ -4,7 +4,7 @@ var polpette = document.querySelector(".polpette");
 var bombe = document.querySelector(".bombe");
 var playerLeft = parseInt(window.getComputedStyle(pl).getPropertyValue("left"));
 var playerBottom = parseInt(window.getComputedStyle(pl).getPropertyValue("bottom"));
-
+var mod = document.getElementById("selDifficoltà").value;
 var score;
 
 function movePgLeft(){
@@ -57,11 +57,19 @@ function generateMeatballs(){
         clearInterval(fallInteval);
 
     }
+    if(mod.value == "easy"){
         polpettaBottom -= 5;
         mb.style.bottom = polpettaBottom + 'px';
         mb.style.left = polpettaLeft + 'px';
-       
     }
+        
+    if(mod.value == "hard"){
+        polpettaBottom -= 6;
+        mb.style.bottom = polpettaBottom + 'px';
+        mb.style.left = polpettaLeft + 'px';
+    }   
+    }
+    
     var fallInteval = setInterval(fallDown, 30);
     
 }
