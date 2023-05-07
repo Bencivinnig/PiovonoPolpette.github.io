@@ -17,6 +17,8 @@ body{
   height: 410px;
   background-image: url("../img/sfondo1.jpg");
   position: relative;
+  box-shadow: 10px 10px gray;
+
 }
 
 .danger-line{

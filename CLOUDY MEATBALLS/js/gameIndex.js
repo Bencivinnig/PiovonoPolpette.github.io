@@ -4,8 +4,8 @@ var polpette = document.querySelector(".polpette");
 var bombe = document.querySelector(".bombe");
 var playerLeft = parseInt(window.getComputedStyle(pl).getPropertyValue("left"));
 var playerBottom = parseInt(window.getComputedStyle(pl).getPropertyValue("bottom"));
-var mod = document.getElementById("selDifficoltà").value;
-var score;
+var score = document.getElementById("#score");
+score = 0;
 
 function movePgLeft(){
     if(playerLeft > 0 ){
@@ -52,22 +52,16 @@ function generateMeatballs(){
     //funzione per gestire polpette
    function fallDown(){
     if(polpettaBottom < playerBottom + 100 && polpettaBottom > playerBottom && polpettaLeft > playerLeft - 30 && polpettaLeft < playerLeft + 100){
-        score++;
+        document.getElementById("score").innerHTML = "Score : " + score++;
         polpette.removeChild(mb);
         clearInterval(fallInteval);
 
     }
-    if(mod.value == "easy"){
         polpettaBottom -= 5;
         mb.style.bottom = polpettaBottom + 'px';
         mb.style.left = polpettaLeft + 'px';
-    }
-        
-    if(mod.value == "hard"){
-        polpettaBottom -= 6;
-        mb.style.bottom = polpettaBottom + 'px';
-        mb.style.left = polpettaLeft + 'px';
-    }   
+    
+    
     }
     
     var fallInteval = setInterval(fallDown, 30);
@@ -98,8 +92,7 @@ function generateBomb(){
     //funzione per gestire bombe
    function fallDownBomb(){
     if(bombBottom < playerBottom + 80 && bombBottom > playerBottom && bombLeft > playerLeft - 30 && bombLeft < playerLeft + 70){
-        alert("game over");
-
+            alert("Game over!!");
     }
         bombBottom -= 5;
         bomb.style.bottom = bombBottom + 'px';
