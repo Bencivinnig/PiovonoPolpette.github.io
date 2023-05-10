@@ -92,18 +92,32 @@ function generateBomb(){
     //funzione per gestire bombe
    function fallDownBomb(){
     if(bombBottom < playerBottom + 80 && bombBottom > playerBottom && bombLeft > playerLeft - 30 && bombLeft < playerLeft + 70){
-            alert("Game over!!");
+        /*var imgElement = document.createElement("img");
+        imgElement.src = "../img/lose1.png";
+        document.getElementById(".game").appendChild(imgElement);*/
+        alert("game over");
+
+        gameOver();
     }
         bombBottom -= 5;
         bomb.style.bottom = bombBottom + 'px';
         bomb.style.left = bombLeft + 'px';
        
     }
-    setInterval(fallDownBomb, 30);
+    var fallDownBombIntervalId = setInterval(fallDownBomb, 30);
+
+    function gameOver() {
+        clearInterval(fallDownBombIntervalId);
+        clearInterval(generateBombIntervalId);
+        
+                /*var imgElement = document.createElement("img");
+        imgElement.src = "../img/lose1.png";
+        document.getElementById(".game").appendChild(imgElement);*/
+    }
     
 }
 
-setInterval(generateBomb, 2500);
+var generateBombIntervalId =setInterval(generateBomb, 2500);
 
 document.addEventListener("keydown" , control);
 
