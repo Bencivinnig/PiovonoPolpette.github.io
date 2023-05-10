@@ -5,7 +5,7 @@ var bombe = document.querySelector(".bombe");
 var playerLeft = parseInt(window.getComputedStyle(pl).getPropertyValue("left"));
 var playerBottom = parseInt(window.getComputedStyle(pl).getPropertyValue("bottom"));
 var score = document.getElementById("#score");
-score = 0;
+score = 1;
 
 function movePgLeft(){
     if(playerLeft > 0 ){
@@ -68,7 +68,7 @@ function generateMeatballs(){
     
 }
 
-setInterval(generateMeatballs, 2000);
+var generateMeatballsIntervallId = setInterval(generateMeatballs, 2000);
 
 var j=0;
 
@@ -92,10 +92,6 @@ function generateBomb(){
     //funzione per gestire bombe
    function fallDownBomb(){
     if(bombBottom < playerBottom + 80 && bombBottom > playerBottom && bombLeft > playerLeft - 30 && bombLeft < playerLeft + 70){
-        /*var imgElement = document.createElement("img");
-        imgElement.src = "../img/lose1.png";
-        document.getElementById(".game").appendChild(imgElement);*/
-        alert("game over");
 
         gameOver();
     }
@@ -107,17 +103,20 @@ function generateBomb(){
     var fallDownBombIntervalId = setInterval(fallDownBomb, 30);
 
     function gameOver() {
+        
         clearInterval(fallDownBombIntervalId);
         clearInterval(generateBombIntervalId);
-        
-                /*var imgElement = document.createElement("img");
+        /*document.game.style.backgroundImage = "";*/
+        document.getElementById("scarso").style.display = "block";
+        document.getElementsByClassName("player").style.display = "block";
+        /*var imgElement = document.createElement("img");
         imgElement.src = "../img/lose1.png";
         document.getElementById(".game").appendChild(imgElement);*/
     }
     
 }
 
-var generateBombIntervalId =setInterval(generateBomb, 2500);
+var generateBombIntervalId =setInterval(generateBomb, 2000);
 
 document.addEventListener("keydown" , control);
 

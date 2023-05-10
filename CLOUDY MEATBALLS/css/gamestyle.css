@@ -16,6 +16,7 @@ body{
   width: 728px;
   height: 410px;
   background-image: url("../img/sfondo1.jpg");
+  z-index:-1;
   position: relative;
   box-shadow: 10px 10px gray;
 
@@ -35,6 +36,8 @@ body{
   position:absolute;
   bottom: 10px;
   left: calc(50% - 25px);
+  z-index:0;
+
 }
 
 .player img{
@@ -66,3 +69,8 @@ body{
   width: 30px;
 }
 
+#scarso{
+  display: none;
+  width: 728px;
+  height: 410px;
+}
