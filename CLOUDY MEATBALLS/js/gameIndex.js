@@ -14,6 +14,7 @@ function movePgLeft(){
     }
 }
 
+
 function movePgRight(){
     if(playerLeft < 598){
         playerLeft += 15;
@@ -106,12 +107,29 @@ function generateBomb(){
         
         clearInterval(fallDownBombIntervalId);
         clearInterval(generateBombIntervalId);
-        /*document.game.style.backgroundImage = "";*/
-        document.getElementById("scarso").style.display = "block";
-        document.getElementsByClassName("player").style.display = "block";
-        /*var imgElement = document.createElement("img");
-        imgElement.src = "../img/lose1.png";
-        document.getElementById(".game").appendChild(imgElement);*/
+        clearInterval(generateMeatballsIntervallId);
+        $(".game").empty();
+        $(".game").css({
+            "background-image": "url('../img/lose1.png')",
+            "background-repeat": "no-repeat",
+            "background-size": "728px 410px",
+          });
+          
+          var gameOverText = $("<div>")
+          .text("Game Over")
+          .css({
+            "position": "absolute",
+            "top": "10%",
+            "left": "50%",
+            "transform": "translate(-50%, -50%)",
+            "font-size": "40px",
+            "font-weight": "bold",
+            "color" : "yellow"
+          });
+        
+        $(".game").append(gameOverText);
+
+        $("")
     }
     
 }
