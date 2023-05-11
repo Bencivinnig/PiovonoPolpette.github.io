@@ -19,7 +19,7 @@ body{
   z-index:-1;
   position: relative;
   box-shadow: 10px 10px gray;
-
+  margin:0;
 }
 
 .danger-line{
@@ -69,12 +69,73 @@ body{
   width: 30px;
 }
 
-#scarso{
-  display: none;
-  width: 728px;
-  height: 410px;
-}
 
 #score{
   font-weight: bold;
+}
+
+#restart{
+
+  top:80%;
+  left: 77%; /*aumento va a destra*/
+  margin: 0;
+  width: 180px;
+  height: 100px;
+
+  font-size: large;
+  border: 1px solid rgb(255, 215, 0);
+  background-color: rgb(255, 215, 0);
+
+  font-weight: bold;
+}
+
+#home{
+
+  top:80%;
+  left: 12%; /*aumento va a destra*/
+  margin: 0;
+  width: 180px;
+  height: 100px;
+
+  font-size: large;
+  border: 1px solid rgb(255, 215, 0);
+  background-color: rgb(255, 215, 0);
+
+  font-weight: bold;
+}
+
+#a{
+  text-decoration: none;
+  color: black;
+}
+
+.pulsate {
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite; 
+}
+
+@keyframes pulsate {
+  0%{
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50%{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+#tit{
+  position: absolute;
+  top:6%;
+  left:42%;
+  margin:0;
+  font-size:40px;
+  color: yellow;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #000;
 }

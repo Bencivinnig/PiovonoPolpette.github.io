@@ -58,7 +58,8 @@ function generateMeatballs(){
         clearInterval(fallInteval);
 
     }
-        polpettaBottom -= 5;
+    
+        polpettaBottom -= 6;
         mb.style.bottom = polpettaBottom + 'px';
         mb.style.left = polpettaLeft + 'px';
     
@@ -96,7 +97,7 @@ function generateBomb(){
 
         gameOver();
     }
-        bombBottom -= 5;
+        bombBottom -= 6;
         bomb.style.bottom = bombBottom + 'px';
         bomb.style.left = bombLeft + 'px';
        
@@ -129,7 +130,7 @@ function generateBomb(){
         
         $(".game").append(gameOverText);
 
-        $("")
+        
     }
     
 }
