@@ -52,7 +52,7 @@ function generateMeatballs(){
 
     //funzione per gestire polpette
    function fallDown(){
-    if(polpettaBottom < playerBottom + 100 && polpettaBottom > playerBottom && polpettaLeft > playerLeft - 30 && polpettaLeft < playerLeft + 100){
+    if(polpettaBottom < playerBottom + 100 && polpettaBottom > playerBottom && polpettaLeft > playerLeft - 20 && polpettaLeft < playerLeft + 100){
         document.getElementById("score").innerHTML = "Score : " + score++;
         polpette.removeChild(mb);
         clearInterval(fallInteval);
@@ -93,7 +93,7 @@ function generateBomb(){
 
     //funzione per gestire bombe
    function fallDownBomb(){
-    if(bombBottom < playerBottom + 80 && bombBottom > playerBottom && bombLeft > playerLeft - 30 && bombLeft < playerLeft + 70){
+    if(bombBottom < playerBottom + 80 && bombBottom > playerBottom && bombLeft > playerLeft - 20 && bombLeft < playerLeft + 70){
 
         gameOver();
     }

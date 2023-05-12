@@ -77,10 +77,10 @@ body{
 #restart{
 
   top:80%;
-  left: 77%; /*aumento va a destra*/
+  left: 80%; /*aumento va a destra*/
   margin: 0;
-  width: 180px;
-  height: 100px;
+  width: 150px;
+  height: 80px;
 
   font-size: large;
   border: 1px solid rgb(255, 215, 0);
@@ -92,10 +92,10 @@ body{
 #home{
 
   top:80%;
-  left: 12%; /*aumento va a destra*/
+  left: 10%; /*aumento va a destra*/
   margin: 0;
-  width: 180px;
-  height: 100px;
+  width: 150px;
+  height: 80px;
 
   font-size: large;
   border: 1px solid rgb(255, 215, 0);
@@ -132,7 +132,7 @@ body{
 #tit{
   position: absolute;
   top:6%;
-  left:42%;
+  left:40%;
   margin:0;
   font-size:40px;
   color: yellow;
