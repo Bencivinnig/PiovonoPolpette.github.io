@@ -52,7 +52,7 @@ function generateMeatballs(){
 
     //funzione per gestire polpette
    function fallDown(){
-    if(polpettaBottom < playerBottom + 100 && polpettaBottom > playerBottom && polpettaLeft > playerLeft - 20 && polpettaLeft < playerLeft + 100){
+    if(polpettaBottom < playerBottom + 100 && polpettaBottom > playerBottom && polpettaLeft > playerLeft && polpettaLeft < playerLeft + 100){
         document.getElementById("score").innerHTML = "Score : " + score++;
         polpette.removeChild(mb);
         clearInterval(fallInteval);
